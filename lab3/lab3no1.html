@@ -89,7 +89,7 @@
         <h3>13. “รหัสสินค้า 3 ตัวแรกเป็นอักขระตัวใหญ่ตามด้วยตัวเลข 2 ตัวเท่านั้น” เช่น AAA89</h3>
         <input type="text" name="code" placeholder="" pattern="^[A-Z]{3}[0-9]{2}">
         <h3>14. กรอกชื่อ นามสกุล ด้วยภาษาไทยเท่านั้น</h3>
-        <input type="text" name="Name" pattern="^[ก-ฮะ-์เ-ไ]{2,}\s[ก-ฮะ-์เ-ไ]{2,}">
+        <input type="text" name="Name" pattern="^[\u0E00-\u0E7F]{2,}\s[\u0E00-\u0E7F]{2,}$">
 
         <p>
             <input type="submit" value="Submit">
