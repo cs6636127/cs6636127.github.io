@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>WEBDEV</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #f8faff;
+        }
+
+        nav {
+            background-color: #2b6bdb;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+            z-index: 100;
+        }
+
+        nav ul {
+            display: flex;
+            align-items: center;
+            list-style: none;
+        }
+
+        nav li {
+            position: relative;
+        }
+
+        nav a {
+            display: block;
+            line-height: 60px;
+            font-size: 16px;
+            padding: 0 20px;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #398cff;
+            color: #ffffff;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            background-color: #ffffff;
+            border-radius: 0 0 6px 6px;
+            box-shadow: 0 6px 12px rgba(182, 182, 182, 0.4);
+        }
+
+        .dropdown ul {
+            flex-direction: column;
+            display: flex;
+            list-style: none;
+            padding: 5px 0;
+        }
+
+        .dropdown li {
+            width: 200px;
+        }
+
+        .dropdown a {
+            padding: 12px 20px;
+            line-height: normal;
+            color: #000000;
+        }
+
+        .dropdown a:hover {
+            background-color: #cbcbcb;
+            color: #000000;
+        }
+
+        .dropdown_2 {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            background-color: #ffffff;
+            box-shadow: 0 6px 12px rgba(182, 182, 182, 0.4);
+
+        }
+
+        .dropdown_2 ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .dropdown_2 li a {
+            display: block;
+            padding: 12px 20px;
+            color: #000000;
+            text-decoration: none;
+        }
+
+        .dropdown_2 li a:hover {
+            background-color: #cbcbcb;
+            color: #000000;
+        }
+
+        nav li:hover .dropdown {
+            display: block;
+        }
+
+        .dropdown li:hover .dropdown_2 {
+            display: block;
+        }
+
+        .profile {
+        text-align: center;
+        margin-top: 200px;
+        font-size: 16px;
+        color: #2b6bdb;
+    }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li>
+                <a href="#">Lab1</a>
+                <div class="dropdown">
+                    <ul>
+                        <li><a href="lab1/Lab1no1.html">Lab1 no1</a></li>
+                        <li><a href="lab1/Lab1no2.html">Lab1 no2</a></li>
+                        <li><a href="lab1/Lab1no3.html">Lab1 no3</a></li>
+                        <li><a href="lab1/Lab1no4.html">Lab1 no4</a></li>
+                        <li>
+                            <a href="">Lab1 no5-A</a>
+                            <div class="dropdown_2">
+                                <ul>
+                                    <li>
+                                        <a href="lab1/lab1no5/web1/workshop1/index2.html">index2.html</a>
+                                    </li>
+                                    <li>
+                                        <a href="lab1/lab1no5/web1/workshop1/ZeZar/stuff/home.html">home.html</a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="lab1/lab1no5/web1/workshop2/classMonday/homework/exercise1.html">exercise1.html</a>
+                                    </li>
+                                    <li>
+                                        <a href="lab1/lab1no5/web1/index4.html">index4.html</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="">Lab1 no5-B</a>
+                            <div class="dropdown_2">
+                                <ul>
+                                    <li>
+                                        <a href="lab1/lab1no5/web2/index.html">index.html</a>
+                                    </li>
+                                    <li>
+                                        <a href="lab1/lab1no5/web2/content/topic/t1.html">t1.html</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                <a href="#">Lab2</a>
+                <div class="dropdown">
+                    <ul>
+                        <li><a href="lab2/lab2-1.html">Lab2 no1</a></li>
+                        <li><a href="lab2/lab2-2.html">Lab2 no2</a></li>
+                        <li><a href="lab2/lab2-3.html">Lab2 no3</a></li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                <a href="#">Lab3</a>
+                <div class="dropdown">
+                    <ul>
+                        <li><a href="lab3/lab3-1.html">Lab3 no1</a></li>
+                        <li><a href="lab3/lab3-2.html">Lab3 no2</a></li>
+                        <li><a href="lab3/lab3-3.html">Lab3 no3</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <div>
+        <div class="profile">
+            <h1>Web Development</h1>  
+            <h2>Student Name: Zitihayath Worawatthanachai</h2>
+            <h2>Student ID: 6604062636127</h2>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>lab3no2</title>
+    <style>
+        input:invalid {
+            border: red solid 2px;
+        }
+
+        fieldset {
+            border: 1px solid black;
+        }
+
+        input#zipCode,
+        #tourist {
+            width: 75px;
+        }
+
+        select#select {
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="/lab3/form-echo.php" method="get">
+        <h3>แบบฟอร์มจองทัวร์</h3>
+        <fieldset>
+            <legend>ข้อมูลทั่วไป</legend>
+            <label>ชื่อ-นามสกุล:</label><br>
+            <input type="text" name="Name" placeholder="กรอกชื่อ-นามสกุล" required>
+            *
+            <br>
+            <label>Email:</label><br>
+            <input type="email" name="Email" required>
+            *
+            <br>
+            <label>โทรศัพท์</label><br>
+
+            <input type="text" name="phone" value="+66" required pattern="^\+66\d{9}">
+            *
+            <br>
+            <label>ที่อยู่</label><br>
+            <textarea rows="10" cols="40" name="address"> </textarea>
+
+            <br>
+            <label>รหัสไปรษณีย์ :</label>
+            <input id="zipCode" type="text" name="zipCode" pattern="[0-9]{5}">
+
+            <br>
+            <label>รูปผู้จอง :</label>
+            <input type="file" name="userPic">
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>ข้อมูลเข้าสู่ระบบ</legend>
+            <label>Username:</label><br>
+            <input type="text" name="userName" pattern="[\w]{8,}">
+            <br>
+            <i>ประกอบด้วยตัวเลข ตัวอักษร หรือ_ตั้งแต่ 8 ตัวขึ้นไป</i>
+            <br>
+            <br>
+            <label>Password :</label><br>
+            <input type="password" name="Password" pattern=".{8,}">
+            <br>
+            <i>ประกอบด้วยอักขระอะไรก็ได้ 8 ตัวขึ้นไป</i>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>ข้อมูลทัวร์ที่ต้องการ</legend>
+            <label>แพ็กเกจทัวร์ :</label>
+            <select name="package" id="select">
+                <option value="">--select--</option>
+                <option value="cambodia">Cambodia</option>
+                <option value="lao">Lao</option>
+                <option value="japan">Japan</option>
+                <option value="kore">Korea</option>
+                <option value="usa">USA</option>
+            </select>
+            <br>
+            <label>วันที่เดินทาง :</label>
+            <input type="date" name="travelDay">
+            <br>
+            <label>จำนวนผู้เดินทาง :</label>
+            <input id="tourist" type="number" name="tourist" min=1 max=10>
+            <br>
+            <label>เน้นการท่องเที่ยวแบบใด? :</label><br>
+            <input type="checkbox" name="travel[]" value="shopping">ชอปปิ้ง
+            <br>
+            <input type="checkbox" name="travel[]" value="nature">ธรรมชาติ
+            <br>
+            <input type="checkbox" name="travel[]" value="ocean">ทะเล
+            <br>
+        </fieldset>
+
+        <br>
+        <label>ยอมรับเงื่อนไขและข้อตกลง</label>
+        <input type="radio" name="agreement" value="agree" checked>I agree
+        <input type="radio" name="agreement" value="disagree">I disagree
+        <input type="submit" value="จอง">
+    </form>
+</body>
+
+</html>
