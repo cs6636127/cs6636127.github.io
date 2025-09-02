@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio</title>
+</head>
+
+<body>
+    <form id="myForm">
+        <input type="radio" name="r" id="r1" value="cars"><label for="r1">cars</label>
+        <input type="radio" name="r" id="r2" value="days"><label for="r2">days</label>
+        <input type="radio" name="r" id="r3" value="jobs"><label for="r3">jobs</label>
+        <hr>
+        <select id="combo1" size="1" style="width:150px">
+            <option value="">chose radio</option>
+        </select>
+    </form>
+
+    <script>
+        let cars = ['Audi', 'BMW', 'Ford', 'Opel', 'Toyota'];
+        let days = ['Monday', 'Wednesday', 'Friday'];
+        let jobs = ['engineer', 'salesman'];
+
+        let selectRadio = document.getElementById("combo1");
+
+        function Select(arr) {
+            selectRadio.innerHTML = "";
+            arr.forEach(item => {
+                let opt = document.createElement("option");
+                opt.value = item;
+                opt.textContent = item;
+                selectRadio.appendChild(opt);
+            });
+        }
+
+        document.getElementById("r1").addEventListener("click", () => Select(cars));
+        document.getElementById("r2").addEventListener("click", () => Select(days));
+        document.getElementById("r3").addEventListener("click", () => Select(jobs));
+
+    </script>
+</body>
+
+</html>

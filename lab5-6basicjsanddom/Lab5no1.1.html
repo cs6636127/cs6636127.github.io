@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab6no1.1</title>
+    <script>
+        function add() {
+
+            let nameTd = document.createElement("td")
+            nameTd.innerHTML = document.getElementById('name').value
+
+            let addressTd = document.createElement("td")
+            addressTd.innerHTML = document.getElementById('address').value
+
+            let phoneTd = document.createElement("td")
+            phoneTd.innerHTML = document.getElementById('phone').value
+
+            let tr = document.createElement("tr")
+            tr.appendChild(nameTd)
+            tr.appendChild(addressTd)
+            tr.appendChild(phoneTd)
+            
+            let addTable = document.getElementById("tb")
+            addTable.appendChild(tr)
+        }
+    </script>
+
+</head>
+
+<body>
+    <form>
+        ชื่อลูกค้า : <input type="text" id="name">
+        <br>
+        ที่อยู่ : <input type="text" id="address">
+        <br>
+        โทรศัพท์ : <input type="tel" id="phone">
+        <br>    
+        <input type="button" value="เพิ่ม" id="addTable" onclick="add()">
+        <br>
+        <br>
+
+        <table border="1" id="tb">
+            <th>ชื่อลูกค้า</th>
+            <th>ที่อยู่</th>
+            <th>โทรศัพท์</th>
+        </table>
+        
+    </form>
+</body>
+
+</html>

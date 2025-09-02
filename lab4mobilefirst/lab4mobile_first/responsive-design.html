@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #ffffff;
+            color: #000000;
+        }
+        .flexible {
+            display: flex;
+            background: white;
+            padding: 20px;
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            background-color: #d8d8d8;
+
+        }
+        .wrap {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .botton {
+            background-color: #1c04a5;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-block;
+        }
+        .botton::before {
+            content: "\f07a";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            margin-right: 10px;
+        }
+        .botton:hover {
+            background-color: #0b0084;
+        }
+
+        @media screen and (max-width: 600px) {
+            .flexible {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .content {
+                font-size: 15px;
+            }
+
+            .botton {
+                width: 100%;
+                font-size: 16px;
+                padding: 10px 140px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="flexible">
+        
+		<div class="product">
+            <img src="imgs/clock.jpg">
+        </div>
+
+        <div class="content">
+            Garmin Instinct, Rugged Outdoor Watch with GPS, 
+            Features GLONASS and Galileo, Heart Rate Monitoring and
+            3-axis Compass, Tundra<br><br>
+            <div class="wrap">
+                <a href="">
+                    <div class="botton">Add to cart</div>
+                </a>
+            </div>
+		</div>
+
+    </div>
+
+</body>
+</html>
